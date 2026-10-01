@@ -2,6 +2,12 @@
 -- PlaceId: 104856666707760 | Shooter misi (kill SMG, buka peti, arena/royal)
 -- Toggle: Insert / RightShift / tombol KR. Semua default OFF, tidak menulis
 -- gerakan sebelum user menyentuh slider (pola anti-flicker + anti dobel-jalan).
+-- GUARD: queue_on_teleport Xeno GLOBAL → file bisa dieksekusi di game lain.
+-- PlaceId resmi 104856666707760 (atau universe 9705384247 bila pindah place).
+if game.PlaceId~=104856666707760 and game.GameId~=9705384247 then
+	warn('[KR] Dilewati: cheat ini untuk Killstreak Royale, bukan game lain (place '..tostring(game.PlaceId)..')')
+	return
+end
 
 local Players=game:GetService('Players')
 local RS=game:GetService('ReplicatedStorage')
